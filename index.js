@@ -35,24 +35,52 @@ if (command === `${prefix}help`) {
 
     return message.channel.send("WIP");
     
-    
+
+
+{
+    if (command === `${prefix}kick`) {
+        // kick @user reason
+
+var args = message.content.slice(prefix.length).split(" ");
+
+
+if(message.member.hasPermission("Kick_Members")) return message.reply("No permissions.")
+if(message.guild.me.hasPermission("Kick_Members"))return message.reply("No permissions.")
+
+if(!args[1]) return message.reply("No username given");
+if(!args[2]) return message.reply("No reason given");
+
+
+var KickUser = message.guild.member(mentions.users.first() || message.guild.members.get(args[1]));
+var reason = args.slice(2).join(" ");
+
+if(!KickUser) return message.reply("user not found")
+
+var embedquestion = new discord.MessageEmbed()
+    .setColor("green")
+    .setTitle("respond within 30 seconds")
+     .setDescription(`are you sure you want to kick ${kickuser}`)
+
+      
+   var embed = new discord.embed 
+   .setcolor('#43b03a')
+   .setfooter(message.member.displayName)
+   .setTimestamp()
+
+
+
+
+{
+ 
 
 }
-    if (command === `${prefix}hallo`) {
-    
-        return message.channel.send("Hallo!!");
 
-
-   var botEmbed = new discord.MessageEmbed()
-       .setTitle("Information")
-       .setDescription("")
-       .setColor("#4b8546");
-
-
-       return message.channel.send(botEmbed)
-
+ 
+}
 
 }
+
 
 });
+
 
