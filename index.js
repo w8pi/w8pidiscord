@@ -37,5 +37,6 @@ if (command === `${prefix}help`) {
     if (command === `${prefix}L`) {
         return message.channel.send("https://cdn.discordapp.com/attachments/694873047076700180/709700159004475412/image0-7.gif");
       
-
+ 
 }});
+bot.login(process.env.token);
