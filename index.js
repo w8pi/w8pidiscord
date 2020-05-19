@@ -51,3 +51,4 @@ if (command === `${prefix}help`){
 
 
 });
+bot.login(process.env.token);
