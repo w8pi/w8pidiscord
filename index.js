@@ -3,11 +3,11 @@ const botConfig = require("./bot config.json");
 
 
 const client = new discord.Client();
-client.login(process.env.token);
+client.login(botConfig.token);
 
 client.on("ready", async () => {
  
-
+    
     console.log(`${client.user.username} is online.`);
     
     
@@ -25,18 +25,29 @@ client.on("message", async message =>{
 
 
 
-var messageArray = message.content.split(" ");
+    var messageArray = message.content.split(" ");
 
 var command = messageArray[0];
 
 
-if (command === `${prefix}help`) {
+
+
+if (command === `${prefix}help`){
+    return message.channel.send("wip");
+
+}
+    if (command === `${prefix}L`){
+        return message.channel.send("https://cdn.discordapp.com/attachments/694873047076700180/709700159004475412/image0-7.gif");
+
+{
+
 }
 
-    return message.channel.send("WIP");
-    if (command === `${prefix}L`) {
-        return message.channel.send("https://cdn.discordapp.com/attachments/694873047076700180/709700159004475412/image0-7.gif");
-      
- 
-}});
-bot.login(process.env.token);
+    }
+
+
+
+
+
+
+});
